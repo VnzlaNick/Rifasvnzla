@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Editorial Indigo Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e9e7f0",
+                        "surface-container-low": "#f4f2fc",
+                        "primary": "#24389c",
+                        "secondary-fixed-dim": "#bec4f2",
+                        "tertiary": "#6c3400",
+                        "on-tertiary-fixed-variant": "#713700",
+                        "surface-variant": "#e3e1ea",
+                        "on-secondary-fixed": "#12183d",
+                        "outline": "#757684",
+                        "on-tertiary-container": "#ffc7a2",
+                        "secondary-fixed": "#dee0ff",
+                        "inverse-primary": "#bac3ff",
+                        "on-primary-fixed-variant": "#293ca0",
+                        "on-primary-container": "#cacfff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#3e446b",
+                        "secondary-container": "#c9cffd",
+                        "on-secondary-container": "#51577f",
+                        "secondary": "#565c84",
+                        "on-background": "#1a1b22",
+                        "surface": "#fbf8ff",
+                        "primary-fixed-dim": "#bac3ff",
+                        "primary-fixed": "#dee0ff",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e3e1ea",
+                        "on-surface-variant": "#454652",
+                        "inverse-surface": "#2f3037",
+                        "on-tertiary-fixed": "#301400",
+                        "primary-container": "#3f51b5",
+                        "surface-dim": "#dbd9e2",
+                        "surface-container": "#efedf6",
+                        "surface-bright": "#fbf8ff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#00105c",
+                        "background": "#fbf8ff",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#4355b9",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f2eff9",
+                        "on-surface": "#1a1b22",
+                        "tertiary-fixed": "#ffdcc6",
+                        "outline-variant": "#c5c5d4",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ffb784",
+                        "tertiary-container": "#8f4700",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fbf8ff;
+        }
+        h1, h2, h3 {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-indigo-950/80 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-indigo-900 dark:text-indigo-100" data-icon="menu">menu</span>
+</div>
+<h1 class="text-indigo-900 dark:text-indigo-100 font-manrope font-bold text-lg tracking-tight">Dashboard</h1>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container">
+<img alt="User Profile" data-alt="Close up portrait of a professional woman with a friendly expression, soft natural office lighting, minimalist aesthetic" src="https://vnzlanick.github.io/Rifasvnzla/"/>
+</div>
+</header>
+<main class="flex-1 px-6 pt-24 pb-32 max-w-md mx-auto w-full">
+<!-- Editorial Header Section -->
+<section class="mb-10">
+<p class="text-on-surface-variant font-label text-[11px] uppercase tracking-[0.2em] mb-2 font-semibold">Morning Overview</p>
+<h2 class="text-4xl font-headline font-extrabold tracking-tighter text-on-background leading-tight">Your Digital<br/>Atrium.</h2>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-2 gap-4 mb-8">
+<!-- Large Card -->
+<div class="col-span-2 bg-surface-container-lowest p-6 rounded-3xl flex flex-col justify-between min-h-[180px]">
+<div>
+<h3 class="text-on-surface font-headline font-bold text-xl">Active Insights</h3>
+<p class="text-on-surface-variant text-sm mt-1">Growth up by 12% this week</p>
+</div>
+<div class="flex items-end justify-between">
+<span class="text-3xl font-headline font-extrabold text-primary">2,482</span>
+<div class="w-16 h-8 bg-surface-container-high rounded-full overflow-hidden">
+<!-- Tiny Sparkline Mock -->
+<div class="w-full h-full bg-gradient-to-r from-primary to-primary-container opacity-20"></div>
+</div>
+</div>
+</div>
+<!-- Square Card 1 -->
+<div class="bg-surface-container p-5 rounded-3xl flex flex-col gap-4">
+<div class="w-10 h-10 rounded-2xl bg-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div>
+<p class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Status</p>
+<p class="font-bold text-on-background">Optimal</p>
+</div>
+</div>
+<!-- Square Card 2 -->
+<div class="bg-surface-container-low p-5 rounded-3xl flex flex-col gap-4 border border-outline-variant/10">
+<div class="w-10 h-10 rounded-2xl bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary" data-icon="bolt">bolt</span>
+</div>
+<div>
+<p class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Sync</p>
+<p class="font-bold text-on-background">Real-time</p>
+</div>
+</div>
+</div>
+
+
+<!-- The Primary Action Button for Modal -->
+<div class="flex flex-col items-center">
+<button class="w-full py-5 px-8 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold shadow-[0_8px_24px_rgba(36,56,156,0.15)] flex items-center justify-center gap-3 active:scale-[0.98] transition-transform">
+                Open Modal
+                <span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
+</button>
+<p class="mt-4 text-on-surface-variant text-xs text-center px-8">Confirm your synchronization preferences by interacting with the module.</p>
+</div>
+</main>
+<!-- Modal Overlay Backdrop (Always visible for this task prompt) -->
+<div class="fixed inset-0 z-[60] bg-on-background/40 backdrop-blur-md flex items-center justify-center px-6">
+<!-- The Indigo Modal -->
+<div class="bg-surface-container-lowest w-full max-w-xs rounded-[2rem] shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-100">
+<div class="p-8 flex flex-col items-center text-center">
+<!-- Modal Visual Anchor -->
+<div class="w-6 h-6 rounded-full bg-surface-container-low flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="verified_user">verified_user</span>
+</div>
+<h2 class="text-2xl font-headline font-extrabold text-on-background tracking-tight mb-3">En mantenimiento</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">
+                    Esperamos que nos discupen, estamos trabajando por ustedes.
+                </p>
+<!-- Modal Actions -->
+<div class="w-full flex flex-col gap-3">
+<button class="w-full py-4 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold text-sm">
+                        Volver 
+                    </button>
+<button class="w-full py-4 rounded-full bg-transparent text-primary font-headline font-semibold text-sm hover:bg-surface-container-low transition-colors">
+                        Disculpen
+                    </button>
+</div>
+</div>
+</div>
+</div>
+
+</nav>
+</body></html>
