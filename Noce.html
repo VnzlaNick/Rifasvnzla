@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary": "#ffffff",
+                      "on-surface-variant": "#464554",
+                      "tertiary-fixed-dim": "#4edea3",
+                      "on-background": "#131b2e",
+                      "on-primary-fixed-variant": "#2f2ebe",
+                      "primary-fixed-dim": "#c0c1ff",
+                      "on-tertiary-container": "#000703",
+                      "outline": "#767586",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed": "#e1e0ff",
+                      "on-error-container": "#93000a",
+                      "on-primary-container": "#fffbff",
+                      "primary-container": "#6063ee",
+                      "secondary-fixed": "#ffdadb",
+                      "inverse-on-surface": "#eef0ff",
+                      "surface-container": "#eaedff",
+                      "surface-tint": "#494bd6",
+                      "on-tertiary-fixed": "#002113",
+                      "on-surface": "#131b2e",
+                      "on-tertiary-fixed-variant": "#005236",
+                      "on-error": "#ffffff",
+                      "tertiary": "#006c49",
+                      "surface-container-high": "#e2e7ff",
+                      "surface-container-highest": "#dae2fd",
+                      "on-secondary-container": "#fffbff",
+                      "secondary-fixed-dim": "#ffb2b7",
+                      "on-secondary-fixed-variant": "#92002a",
+                      "tertiary-fixed": "#6ffbbe",
+                      "error-container": "#ffdad6",
+                      "surface-bright": "#faf8ff",
+                      "primary": "#4648d4",
+                      "surface-variant": "#dae2fd",
+                      "inverse-primary": "#c0c1ff",
+                      "surface-container-low": "#f2f3ff",
+                      "on-secondary-fixed": "#40000d",
+                      "on-tertiary": "#ffffff",
+                      "inverse-surface": "#283044",
+                      "on-primary-fixed": "#07006c",
+                      "secondary-container": "#dc2c4f",
+                      "background": "#faf8ff",
+                      "surface-container-lowest": "#ffffff",
+                      "error": "#ba1a1a",
+                      "secondary": "#b90538",
+                      "tertiary-container": "#00885d",
+                      "outline-variant": "#c7c4d7",
+                      "surface-dim": "#d2d9f4",
+                      "surface": "#faf8ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "stack-lg": "32px",
+                      "stack-sm": "8px",
+                      "unit": "4px",
+                      "margin-main": "24px",
+                      "stack-md": "16px",
+                      "section-gap": "48px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/10 shadow-sm flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform duration-200 text-indigo-600">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-xl font-black tracking-tighter text-indigo-600 font-['Inter']">LUMINA</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden border border-primary/10">
+<img alt="User Profile" data-alt="A professional headshot of a creative individual with warm lighting against a soft, blurred studio background. The style is modern and clean, fitting a premium social media aesthetic. The lighting is high-key and soft, creating a bright and approachable mood that complements the overall light-mode UI design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzSn-vC1vinVc16xLYAQO54cClyxQ7f2RJbMyZeJHbJZFj9tEZqdHgJTO9zbn_VtGLrhgq59k-_TFHSYNKe1GdKTkWKz9LuVguMgYiG-cTjcxZ5lntT6ut2U2Phewu8XLs9xb6k7nc-y7QkxfhMDD5h2xxwkBTg17XWrYov1CSAyWTpp1e9q47JN_y4yYdZzsGujBhTnoOugpN9lh7mXC7xmL7qP5f3RLAfND31IO24rI8fGcfqTW42L7rTAVtbSZjzL1Wj0b0Mcfa"/>
+</div>
+</div>
+</header>
+<main class="pt-20 pb-24 max-w-md mx-auto px-margin-main">
+<!-- Story/Category Row -->
+<section class="mb-stack-lg overflow-x-auto hide-scrollbar flex gap-4 py-2">
+<div class="flex-shrink-0 flex flex-col items-center gap-2">
+<div class="w-16 h-16 rounded-full p-0.5 border-2 border-primary border-dashed">
+<div class="w-full h-full rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">add</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Your Story</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-2">
+<div class="w-16 h-16 rounded-full p-0.5 border-2 border-indigo-500">
+<img class="w-full h-full rounded-full object-cover" data-alt="Portrait of a young creative professional with short dark hair, smiling warmly. The setting is a minimalist office with large windows, flooded with natural daylight. The photography style is sharp, clean, and high-end, perfectly aligned with a sophisticated digital platform's visual identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnqUe8Fgkbm_a-z_4zaI5nrOyj2amZ-lcEZ1Mro7iI3PzS7XpLzGuF_SW7J-hYIQ2F_LrX8MnDyYcfMRTGk4BbdfyJ4zN-C3fUjKKepUue4E7Ark4TgtfYQxlIIPIZPex8IXbES3J65IO2EqLCxb6c1H096VfQSmZ8cqtK-XsoMJYADwvbuUgeKqnk-ajmZZ18SmALRKGyvDAUgZ6lw-KLJck4t7EyZRuZ4rgFUJNRG96ql1wHFFEu1I5xLXH0WK0iN4S2nhhsMmLh"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Architecture</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-2">
+<div class="w-16 h-16 rounded-full p-0.5 border-2 border-indigo-500">
+<img class="w-full h-full rounded-full object-cover" data-alt="A vibrant lifestyle portrait of a woman with braided hair, set against a backdrop of soft pastel colors. The lighting is golden hour warmth, creating a cinematic and inspiring feel. This image represents the premium storytelling aspect of the Lumina platform with high-quality resolution and artistic composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAaYVSRhoFy1qqg31JGGIhLWUPGGF2VhFqL4imgBh_5ZlMSA75HKjLuYpvFsHw2R7JfUyDG33ap7BuOAYO-YavNLQ_3ucUqfQi0HWrwFwLo-Hp6WgBEksSzEusXLzXr3EAgjNjzBAbUaBdCVq8g3Nr71OH-l2w6LxAeBm_kb45ORz_4Af7YuQuVf_PTkDJLYvxhKd5svcE2yVTXTpjLG-EIs6jkzBovEIZk-nPiXIVtoStCiBxWUHF7TXdBIRcX-kGscbFTDtmcfOI"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Nature</span>
+</div>
+<div class="flex-shrink-0 flex flex-col items-center gap-2">
+<div class="w-16 h-16 rounded-full p-0.5 border-2 border-indigo-500">
+<img class="w-full h-full rounded-full object-cover" data-alt="Close up portrait of a man in his late 30s with a rugged look, wearing a minimalist black turtleneck. The lighting is dramatic but controlled, emphasizing textures and detail. The overall aesthetic is moody yet clean, sitting perfectly within a high-end photography showcase application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQWwdBT8atXLGhPAP3DBHRnmtnvN8jPmZcEN2r-4JJofWdnRSFgbiKv-ZTV9xw1lWSacyLpNn-CHr_Itqb55U5dTfEXgtEnq5iohBSiUS14s7uwWaEZ6HG80LQsmK0SGl9qXENJ90-7ZW2L7tj0rOAe8-g2116HWluBgvOIB_jOad6hqnQIzLm7jJh6nuCDxJSLKbNfoX_fB6k8HX7aceL7xYVxoOWoLj8NaRBgmtJFDGYk0kYOXi-d64GhMm5E6sHex55i-K2IWK8"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Studio</span>
+</div>
+</section>
+
+<button class="text-on-surface-variant active:scale-90 transition-transform">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<!-- Image Slider Container -->
+<div class="relative group">
+<div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar aspect-square">
+<!-- Slide 1 -->
+<div class="flex-shrink-0 w-full snap-center relative">
+<img class="w-full h-full object-cover" data-alt="A breathtaking architectural photograph of a minimalist wooden cabin nestled in a snowy forest. The lighting is soft morning mist, creating a serene and luxurious atmosphere. The design is clean with sharp lines, highlighting the high-end visual storytelling focus of the platform. Deep indigo shadows contrast with pristine white snow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD_-uHs88mCIG1TBL5eEVPaCwghK_sMBq67ce9r_MaBUH3OsM-sfN8Cm_b1HK9PYtKl_2j11WppB-kuyC3irD8_LW6b12-pW_kmQ1eUfK5q8BSWbkFA833HUQw4OJZdFWXHiBDlzGjhLaIXO96NI9kUAZ2yyvAyM5l-8iyM8KgN_im3Y8I1QFJpxT3g6qHGredg1_Jroc-XFsKkYkraaT8-oevzwLxpFwhBkGCMjL050-SFx_Efam1Wr8ae8lF2QnpE8ibYoV4UH6A"/>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-secondary w-full" style="width: 33.33%;"></div>
+</div>
+<!-- Slide 2 (Peek) -->
+<div class="flex-shrink-0 w-full snap-center relative">
+<img class="w-full h-full object-cover" data-alt="Interior view of a modern gallery space with high ceilings and white walls. A large abstract painting featuring vibrant indigo and rose splashes dominates the central wall. The lighting is bright and architectural, casting soft shadows. The overall mood is sophisticated, inspiring, and deeply artistic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4U8cN_U6kYRyN-pR6HEzQVfYXBcaHGqpVAcGibw10nrM_E0ZOiVIUXWr3QtNdtn0X9F2Dxp4k7lK61FwGQVustdGEUn-hFZpKy3eVnN375_MeH1B9Wv2QAF2RyFEyNx-6zlgQd_wlptdzY66v8vtgIJ6VyzDWcwYA7e-wOAosLGsmAOus7cXmpfh90fKpjrdoL-MIYpt72ObHeCdEWvsd5sUeHBCD89VPV6Hh8s-XuNCKjNIRCO98OpEBmt78yRKbVw6OS1qBPd5d"/>
+</div>
+</div>
+<!-- Navigation Dots -->
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 px-3 py-1.5 rounded-full bg-black/20 backdrop-blur-md">
+<div class="w-2 h-2 rounded-full bg-white"></div>
+<div class="w-2 h-2 rounded-full bg-white/40"></div>
+<div class="w-2 h-2 rounded-full bg-white/40"></div>
+</div>
+</div>
+<!-- Engagement & Interaction -->
+<div class="p-stack-md">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-4">
+<button class="text-secondary active:scale-90 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<button class="text-on-surface-variant active:scale-90 transition-all">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+<button class="text-on-surface-variant active:scale-90 transition-all">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+<button class="text-on-surface-variant active:scale-90 transition-all">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+
+
+
+
+
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #faf8ff;
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#464554",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "on-background": "#131b2e",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "on-tertiary-container": "#000703",
+                        "outline": "#767586",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#e1e0ff",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#fffbff",
+                        "primary-container": "#6063ee",
+                        "secondary-fixed": "#ffdadb",
+                        "inverse-on-surface": "#eef0ff",
+                        "surface-container": "#eaedff",
+                        "surface-tint": "#494bd6",
+                        "on-tertiary-fixed": "#002113",
+                        "on-surface": "#131b2e",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "on-error": "#ffffff",
+                        "tertiary": "#006c49",
+                        "surface-container-high": "#e2e7ff",
+                        "surface-container-highest": "#dae2fd",
+                        "on-secondary-container": "#fffbff",
+                        "secondary-fixed-dim": "#ffb2b7",
+                        "on-secondary-fixed-variant": "#92002a",
+                        "tertiary-fixed": "#6ffbbe",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#faf8ff",
+                        "primary": "#4648d4",
+                        "surface-variant": "#dae2fd",
+                        "inverse-primary": "#c0c1ff",
+                        "surface-container-low": "#f2f3ff",
+                        "on-secondary-fixed": "#40000d",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#283044",
+                        "on-primary-fixed": "#07006c",
+                        "secondary-container": "#dc2c4f",
+                        "background": "#faf8ff",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary": "#b90538",
+                        "tertiary-container": "#00885d",
+                        "outline-variant": "#c7c4d7",
+                        "surface-dim": "#d2d9f4",
+                        "surface": "#faf8ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "stack-lg": "32px",
+                        "stack-sm": "8px",
+                        "unit": "4px",
+                        "margin-main": "24px",
+                        "stack-md": "16px",
+                        "section-gap": "48px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/10 shadow-sm flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-indigo-600">menu</span>
+</button>
+<span class="text-xl font-black tracking-tighter text-indigo-600">LUMINA</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-['Inter'] font-medium tracking-widest text-sm text-indigo-600" href="#">Gallery</a>
+<a class="font-['Inter'] font-medium tracking-widest text-sm text-slate-400 hover:opacity-80 transition-opacity" href="#">Studio</a>
+<a class="font-['Inter'] font-medium tracking-widest text-sm text-slate-400 hover:opacity-80 transition-opacity" href="#">Explore</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:opacity-80">search</button>
+<div class="w-8 h-8 rounded-full bg-primary-fixed overflow-hidden ring-2 ring-primary/20">
+<img alt="User profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8pM24A-KDjiA-LQaXEm9QDUwETAw5mosA-p-nHihrcnI-4zrS3pSIb82Q4askQIpNXWVkIBhR4L3TF2uGa90UfgGL0HofsAVsNAqU6L0914ecUToZdy7ys3ByZst3YIazVRuJM8BQG-jns81RMLCqC_2XdPlwFRX2BqdOQg7-ttawMGBCM3WZpQrvCa-GWltOBOlB3k-P2BYFf3jAcC38uBO5tV0VBzPDH6SeMQC77MwVHUKh2kIYD2LIlijUc9u5Pwzdwu0QSGjz"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-margin-main max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-section-gap">
+<!-- Gallery Section -->
+<div class="lg:col-span-7 flex flex-col gap-stack-md">
+<!-- Main Display Area -->
+<div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-surface-container shadow-sm group">
+<img class="w-full h-full object-cover" data-alt="A high-end studio shot of a vibrant red performance sneaker against a clean, minimalist white background. The lighting is soft and directional, highlighting the sleek textures of the fabric and the structural curves of the sole. The composition is balanced and modern, embodying a premium sportswear aesthetic with crisp clarity and energetic mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzz0M06hu6kun61RkfggX-LZ3_lyBBv9wGJk-4VP3y5jSUQXr4TfNQJ5NfQsQXh70J7s4UBi0ne2DDX_iRzFLBOjHMvAe73eOEslKNTw8uTImScEU15zSr_jhF6gDDtZde-HEu8Ymr97gQqUtKKhd7WDvwk0O9FgF8tPQt5XfriRQBVH-Ca1MjW5x9hQfhuD1JYLMQ7NC_FkTuBcaWT2nMWh5QFFuMfQqN1MD-K868hxfGOwTD6gRe_lGY4kpA-Elq8Y3NHIb4aN0o"/>
+<!-- Action Overlay -->
+<div class="absolute top-4 right-4 flex flex-col gap-2">
+<button class="w-10 h-10 rounded-full bg-white/70 backdrop-blur-md flex items-center justify-center text-indigo-600 shadow-sm active:scale-90 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-white/70 backdrop-blur-md flex items-center justify-center text-indigo-600 shadow-sm active:scale-90 transition-all">
+<span class="material-symbols-outlined">zoom_in</span>
+</button>
+</div>
+<!-- Progress Bar -->
+<div class="absolute bottom-0 left-0 w-full h-[2px] bg-secondary-container/20">
+<div class="h-full bg-secondary w-1/4"></div>
+</div>
+</div>
+<!-- Thumbnail Row -->
+<div class="flex gap-gutter overflow-x-auto hide-scrollbar py-2">
+<!-- Active Thumbnail -->
+<button class="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden ring-2 ring-indigo-600 ring-offset-2 active:scale-95 transition-all">
+<img class="w-full h-full object-cover" data-alt="Detailed close-up of a red athletic sneaker focusing on the breathable mesh texture and pristine white stitching. The background is a soft, out-of-focus white studio environment, maintaining the clean minimalism of the brand. High-key lighting emphasizes the vibrant indigo-tinted shadows and premium material quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6kn7hBynt-oCZ5AKJgyLVfk45wTjSmpK1xZ0OQXoP1SXVJ0ttz0Vc8b8vBcPwJOvQGpBSRSns7xrxsPsMlL9CedkFGLVLrZdVMYYv58WxAxoSuFaZQFV3zztBIRdInLxLtgJU4ard0s9w4hSd4IqSvFGK9f7Mfims0-yoNJtl-QzMoDMx-3WDThyEyavAmakKwk6YTGVWiHBEucECUwZuQ-KQN85JlQZ65jDM-FxkETEwOaQ8mTlObBDxfWuUxHBW6IFOZrS9X89J"/>
+</button>
+<!-- Inactive Thumbnails -->
+<button class="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border border-white/10 hover:border-indigo-300 active:scale-95 transition-all">
+<img class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="A lifestyle product shot of a different sneaker angle, showing the heel support and the sleek profile of the footwear. The aesthetic is extremely clean with a focus on geometric balance and airy white space. Subtle indigo accents in the lighting create a sophisticated, tech-forward atmosphere for creative professionals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARaiHCz5fb6RUYUybTJbMst3Q-hcheU61rD35ySY7A13Hx2E5wUriMje_EyKSEiHYPYIrZIRbSU21kdKcjXW4xPbDyiGMS0EFqqgvt9iKkshok90I0onUD1OazbG8sckCxOKx4ojR1XQHSgr33KWqR66ErPb0K4zX0zlfER3WC8xxZ4zglVCs58hI7Hn_twZM7xeVPeOefJ3U5beZBHb7O0gqoODP0EfVKVZ3NEzYDiPJl_tVSK0nuAdB-bleWQiCm0BYF0njqYGRZ"/>
+</button>
+<button class="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border border-white/10 hover:border-indigo-300 active:scale-95 transition-all">
+<img class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="Macro photography of the shoelace eyelets and branded tongue of a premium athletic shoe. The lighting is diffused and bright, creating a glassmorphism feel with soft blurs and high-end texture definition. The overall palette is white and gray with sharp red highlights that pop against the neutral base." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeEZrwWj4hBnqEbX_S4j2-Zt8YebAENcPq63N5OdonZ_rjFnwj82ZSfEPj1gNg9RPZgeQGpsbB_2lgKCZv-Nc-YvV9xYGSI2-UZOs6U_KOa_ILipm95AxcgFo_pb8LXMSF7aJgMmZLxqADO325cwhOUY13UAlZYh0Qh8639_CMIatkj-vjVO9cztkxn4JcvqFtH8SPSICEh9okxLfGbqKn3JXLx3TjYiIAt_Mxp--VzYFpJAEquP_kbUm-nRPS3nm3yan1rCGe9BJe"/>
+</button>
+<button class="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border border-white/10 hover:border-indigo-300 active:scale-95 transition-all">
+<img class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="Minimalist top-down view of a designer sneaker pair arranged symmetrically on a pristine light-colored surface. The composition uses generous whitespace to evoke a sense of luxury and breathing room. Cool-toned ambient shadows and a 1px soft stroke around the product emphasize its high-end craftsmanship and modern appeal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9RAFXTGfWRjkKETf0hpylUjpDEjCyMm0ZBQ-bodt30qO9oDvcUXhv9ZJMvRvfTPjQzOs4gURRytPv2xqX6nz89doGJmQ6BjeIh7mmxMvuwXAb8-k0M_0CExHj6BYd0FF0VrFSDotZNKImwjhMpW3OM3ou7vBvQOiebNlyC6XtUOtJN73mSxBdaGuTzq7YyvNSWf1StDanoXAI8Xa6sEFeL6jhY9SS9Z4XZQj9jFyrXDRtFaVFox7TaeV7aQqTDXTEv39hY_cUg_Sk"/>
+</button>
+<button class="relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border border-white/10 hover:border-indigo-300 active:scale-95 transition-all">
+<img class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" data-alt="Dynamic shot of a red sneaker's sole showing the intricate traction pattern and ergonomic design. The lighting is crisp and modern, featuring the signature energetic vibe of the Lumina brand. The background remains a consistent soft-white studio space, ensuring the product is the sole hero of the frame." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPU84aLhIe_S76ntWA_EbDbYdI7sYNGybAH4R-xT3w9jTGqEzeGxRK0jV4Vuu4uBvdZNcSmFn-oQ3NyQ4U4vHWH1AI_2ZoWu5FoywB8paWG0izA0BaAFxuba62v9CvWI94uK0kAr7134MVPH_uKFEdPXq7LHYe_htcSXf2npYfI_3hsEuWP2Vh6r7D-T41Gbqrz1eOzLGa0dZyXuOjNwrxki7pItaGD-XMYAjpVBL91oD79Rdbitv0ujJcf9gWdAznCFOzULl1pT7a"/>
+</button>
+</div>
+</div>
+<!-- Product Info Section -->
+<div class="lg:col-span-5 flex flex-col gap-stack-lg">
+<div class="flex flex-col gap-stack-sm">
+<div class="flex gap-2">
+<span class="px-3 py-1 rounded-full bg-primary/10 text-primary font-label-md text-label-md">NEW ARRIVAL</span>
+<span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary font-label-md text-label-md">LIMITED</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">VELOCITY ELITE X1</h1>
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">star</span>
+<span class="ml-2 text-on-surface-variant font-label-md text-label-md">(128 Reviews)</span>
+</div>
+</div>
+<div class="flex items-baseline gap-4">
+<span class="text-display-lg font-display-lg text-indigo-600">$189.00</span>
+<span class="text-on-surface-variant font-body-lg text-body-lg line-through">$245.00</span>
+</div>
+<div class="flex flex-col gap-stack-md">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Engineered for ultimate responsiveness and lightweight performance. The Velocity Elite X1 features our signature reactive foam technology and breathable aero-mesh for long-distance comfort.
+                    </p>
+</div>
+<!-- Interaction States -->
+<div class="flex flex-col gap-stack-md">
+<span class="font-label-md text-label-md text-on-surface">SELECT SIZE (US)</span>
+<div class="grid grid-cols-4 gap-2">
+<button class="h-12 border-2 border-indigo-600 bg-indigo-600 text-white rounded-xl font-label-md flex items-center justify-center">9.0</button>
+<button class="h-12 border border-outline-variant hover:border-indigo-600 rounded-xl font-label-md flex items-center justify-center transition-colors">9.5</button>
+<button class="h-12 border border-outline-variant hover:border-indigo-600 rounded-xl font-label-md flex items-center justify-center transition-colors">10.0</button>
+<button class="h-12 border border-outline-variant hover:border-indigo-600 rounded-xl font-label-md flex items-center justify-center transition-colors">10.5</button>
+</div>
+</div>
+<div class="flex flex-col gap-stack-md mt-4">
+<button class="w-full h-16 bg-indigo-600 text-white rounded-xl font-headline-md flex items-center justify-center gap-2 shadow-[0_8px_24px_rgba(99,102,241,0.12)] active:scale-95 transition-all">
+<span class="material-symbols-outlined">shopping_cart</span>
+                        ADD TO COLLECTION
+                    </button>
+<button class="w-full h-16 border-2 border-indigo-600 text-indigo-600 rounded-xl font-headline-md flex items-center justify-center gap-2 hover:bg-indigo-50 active:scale-95 transition-all">
+                        VIEW SIZE GUIDE
+                    </button>
+</div>
+<div class="pt-stack-lg border-t border-outline-variant flex flex-col gap-stack-sm">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-indigo-600">local_shipping</span>
+<span class="font-label-md text-label-md">FREE EXPRESS SHIPPING WORLDWIDE</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-indigo-600">verified</span>
+<span class="font-label-md text-label-md">2-YEAR MANUFACTURER WARRANTY</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Mobile only visibility context) -->
+<footer class="md:hidden fixed bottom-0 w-full z-50 pb-safe bg-white/70 backdrop-blur-xl border-t border-white/10 shadow-[0_-8px_24px_rgba(99,102,241,0.12)] flex justify-around items-center h-20 px-4 w-full">
+<a class="text-slate-400 flex flex-col items-center gap-1 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-wider">Explore</span>
+</a>
+<a class="text-indigo-600 flex flex-col items-center gap-1 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">collections</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-wider">Gallery</span>
+</a>
+<a class="text-slate-400 flex flex-col items-center gap-1 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">auto_awesome_motion</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-wider">Studio</span>
+</a>
+<a class="text-slate-400 flex flex-col items-center gap-1 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-wider">Profile</span>
+</a>
+</footer>
+</body></html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#13ec6d",
+                    "on-primary": "#003914",
+                    "on-primary-fixed-variant": "#005321",
+                    "error": "#ffb4ab",
+                    "primary": "#9fffac",
+                    "on-secondary-container": "#a5baab",
+                    "surface": "#0d150d",
+                    "background": "#0d150d",
+                    "tertiary-container": "#cbcecd",
+                    "surface-tint": "#00e468",
+                    "surface-variant": "#2e372d",
+                    "on-surface-variant": "#bacbb8",
+                    "on-secondary": "#223429",
+                    "tertiary-fixed": "#e1e3e2",
+                    "surface-dim": "#0d150d",
+                    "tertiary": "#e8eae9",
+                    "on-tertiary-fixed-variant": "#444747",
+                    "surface-bright": "#323c32",
+                    "inverse-surface": "#dbe6d7",
+                    "surface-container-lowest": "#081008",
+                    "on-primary-container": "#00652a",
+                    "on-tertiary-fixed": "#191c1c",
+                    "on-tertiary-container": "#545857",
+                    "secondary-container": "#384b3f",
+                    "secondary": "#b6ccbc",
+                    "secondary-fixed-dim": "#b6ccbc",
+                    "on-secondary-fixed": "#0d1f15",
+                    "on-primary-fixed": "#002109",
+                    "surface-container": "#192219",
+                    "on-error": "#690005",
+                    "primary-fixed": "#67ff8c",
+                    "outline": "#859583",
+                    "primary-fixed-dim": "#00e468",
+                    "on-background": "#dbe6d7",
+                    "tertiary-fixed-dim": "#c4c7c6",
+                    "surface-container-high": "#232c23",
+                    "on-secondary-fixed-variant": "#384b3f",
+                    "inverse-primary": "#006e2e",
+                    "on-tertiary": "#2e3131",
+                    "error-container": "#93000a",
+                    "surface-container-highest": "#2e372d",
+                    "outline-variant": "#3b4b3c",
+                    "inverse-on-surface": "#293329",
+                    "surface-container-low": "#151e15",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed": "#d2e8d8",
+                    "on-surface": "#dbe6d7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "safe-margin": "20px",
+                    "xs": "4px",
+                    "unit": "4px",
+                    "lg": "24px",
+                    "grid-gutter": "8px",
+                    "xl": "32px",
+                    "md": "16px",
+                    "sm": "8px"
+            },
+            "fontFamily": {
+                    "h3": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h2": ["Inter"],
+                    "h1": ["Inter"],
+                    "number-grid": ["Inter"],
+                    "label-bold": ["Inter"]
+            },
+            "fontSize": {
+                    "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "h1": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "number-grid": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        background-color: #0d150d;
+      }
+      .ticket-perforation {
+        background-image: radial-gradient(circle, transparent 8px, #162e21 8px);
+        background-size: 24px 24px;
+        background-position: -12px center;
+        background-repeat: repeat-y;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-950/95 backdrop-blur-md border-b border-emerald-500/15 shadow-[0_4_20px_rgba(0,0,0,0.4)] flex justify-between items-center px-5 h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-emerald-400" data-icon="menu">menu</span>
+<h1 class="text-xl font-black italic text-emerald-400 uppercase tracking-widest font-inter">LOTO VZLA</h1>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-emerald-500/30 overflow-hidden active:scale-95 transition-transform">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A professional studio portrait of a young man with a friendly expression, set against a dark, moody background. The lighting is dramatic with soft green rim lights that align with a premium technology brand aesthetic. The overall style is clean, modern, and high-end, featuring deep blacks and vibrant emerald accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANkLhrmzWHL5a7WwZt26AZhQKqi9i8S9xRQG2-CBGoI7Hf9W3ntbn-KcZwTXtmAnjljhSWNPA6U7nzZAqQNwUytpnLY2uWCaI-l_UOMvGw4r5QmqNFL3jf9sw_a8sQKSDzZC99WuovlIdtUuYQyTcwNmRK5ORX_mwhtGPRASLhOW8dRRiJqDwNpyN5kdkXXmEocfsbwn_uZcReLKk27AQTW9iQUp6__Nk3JDPE2E0nxJjfP6E8jbKINSDDNYQL_8_ZjImobWuaLsSC"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-safe-margin max-w-2xl mx-auto">
+<!-- Header Section -->
+<div class="mb-lg">
+<h2 class="font-h1 text-h1 text-primary-fixed mb-xs">Mis Tickets</h2>
+<p class="font-body-md text-on-surface-variant">Gestiona tus participaciones activas y pasadas.</p>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-sm mb-lg overflow-x-auto pb-2 no-scrollbar">
+<span class="bg-primary-container text-on-primary font-label-bold text-label-bold px-md py-xs rounded-full whitespace-nowrap">Todos</span>
+<span class="bg-surface-container-high text-on-surface font-label-bold text-label-bold px-md py-xs rounded-full border border-outline-variant whitespace-nowrap">Pagados</span>
+<span class="bg-surface-container-high text-on-surface font-label-bold text-label-bold px-md py-xs rounded-full border border-outline-variant whitespace-nowrap">Pendientes</span>
+</div>
+<!-- Ticket List (Bento-ish Stack) -->
+<div class="space-y-md">
+<!-- Ticket Item 1 -->
+<div class="bg-[#162e21] rounded-xl border border-primary-container/15 overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.4)] relative">
+<div class="flex">
+<div class="w-24 h-full min-h-[120px] relative">
+<img class="w-full h-full object-cover grayscale-[0.2]" data-alt="Close up of high-quality grocery items including fresh vegetables and premium packaged goods in a rustic wooden basket. The lighting is warm but cinematic, with emerald green shadows that evoke a sense of luxury and abundance. The scene is shot with a shallow depth of field, highlighting the richness of the textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7ika3SJNoS6qILSOxUL8Q637rTQMrqQ5aVrcB5KM9ZlpKsiG8R65mEenZMyHDDs_-ZAECrv1w3gKuEI5_jXRCKlT5cOED6lm90_v4WlgWTtHn_iC7hsBT4KHNJd9aV5Dppeizg46DAOgvhgaGbYZ-Jih_9GdrhO2Z_T_6CcVy5rLEV1Cxc0frEB1LJ2C18v-cfz-HdC1D486brxj9HA9Ynze29XpR735DzjdD3XWFVhtt79y0VJVpwfFwFEQ5cNrOKQ-bDGI1bJLN"/>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#162e21]"></div>
+</div>
+<div class="flex-1 p-md flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-h3 text-h3 text-on-surface leading-tight">Súper Combo Alimenticio</h3>
+<p class="text-xs font-label-bold text-on-surface-variant mt-1 uppercase tracking-wider">Comprado: 24 May 2024</p>
+</div>
+<span class="bg-primary-container/10 text-primary-container px-sm py-1 rounded-lg border border-primary-container/20 font-label-bold text-[10px] uppercase">Pagado</span>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase font-bold tracking-tighter">Número de Ticket</span>
+<span class="font-h1 text-h1 text-primary-fixed leading-none">#03</span>
+</div>
+<button class="bg-primary-container text-on-primary p-2 rounded-lg flex items-center justify-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="qr_code_2">qr_code_2</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Ticket Notch Visual -->
+<div class="absolute top-1/2 -left-3 w-6 h-6 rounded-full bg-background border border-primary-container/15 -translate-y-1/2"></div>
+</div>
+<!-- Ticket Item 2 (Pending) -->
+<div class="bg-[#162e21] rounded-xl border border-primary-container/15 overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.4)] relative">
+<div class="flex">
+<div class="w-24 h-full min-h-[120px] relative">
+<img class="w-full h-full object-cover grayscale-[0.2]" data-alt="A sleek, modern high-end smartphone lying on a dark reflective surface. The screen glow creates a soft emerald aura around the device. The composition is minimalist and futuristic, using a professional tech-product photography style with deep shadows and vibrant neon green highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd6MnWZ33p4C-hH1t_ok190fL-qI81RJw6kdQsM_5nJ_nYDHh2c1xX6yNi4PRS9SobzNCSE9Vi3wD62dkg-5Tw7-X_OwzUvncPB7L-C16KWkeKo34CdkvnZqewPhw-Q2jQMIcQGSp3UItwykF8OX0PCw8PteB9HGcx1ehbytrODQPS5Jyol41M-432uZrX0RxuhbJ82a2loTx0P4CVoLMFLAdRmjmFCUoH5zNa26AwaoGZFBUHTSsdR-11vPZh7T8ZBgsTEyYMTomE"/>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#162e21]"></div>
+</div>
+<div class="flex-1 p-md flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-h3 text-h3 text-on-surface leading-tight">iPhone 15 Pro Max</h3>
+<p class="text-xs font-label-bold text-on-surface-variant mt-1 uppercase tracking-wider">Comprado: 22 May 2024</p>
+</div>
+<span class="bg-error-container text-on-error-container px-sm py-1 rounded-lg border border-error/20 font-label-bold text-[10px] uppercase">Pendiente</span>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase font-bold tracking-tighter">Número de Ticket</span>
+<span class="font-h1 text-h1 text-primary-fixed leading-none">#87</span>
+</div>
+<button class="border border-primary-container text-primary-container px-md py-1.5 rounded-lg text-label-bold font-label-bold active:scale-95 transition-transform">
+                                Pagar ahora
+                            </button>
+</div>
+</div>
+</div>
+<div class="absolute top-1/2 -left-3 w-6 h-6 rounded-full bg-background border border-primary-container/15 -translate-y-1/2"></div>
+</div>
+<!-- Ticket Item 3 -->
+<div class="bg-[#162e21] rounded-xl border border-primary-container/15 overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.4)] relative">
+<div class="flex">
+<div class="w-24 h-full min-h-[120px] relative">
+<img class="w-full h-full object-cover grayscale-[0.2]" data-alt="A powerful, black modern motorcycle parked in a dark garage with atmospheric green neon tube lighting in the background. The scene is high-contrast and dramatic, emphasizing the metallic textures and sleek curves of the bike. The mood is rebellious and high-stakes, fitting a premium raffle theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcwYPJo81aRaDM5_Vf04Bs7niaTYKcnMazd8GFnsNJIqbYIzbPI_iX1w628MEbBsOfoHE0RZ7g4yFky8VNtccYyGeu8xtbhwDkEuPeBoa4zlz-aIImieDgTHMO3Y2hCQMQf-LLu3SvgS-66xuvVLQt5lmoMguG1D8Wnxk--vMBf92EGQvZgNw_Uet5Vx3JQQc7auKqmwn-vTY_L2aPgoewVvGRMJ2wxtXTKnTwp4edm8KcCMl_xqMxYymTtb6WQwrxKZwVmnpaQ419"/>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#162e21]"></div>
+</div>
+<div class="flex-1 p-md flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-h3 text-h3 text-on-surface leading-tight">Moto Empire 2024</h3>
+<p class="text-xs font-label-bold text-on-surface-variant mt-1 uppercase tracking-wider">Comprado: 20 May 2024</p>
+</div>
+<span class="bg-primary-container/10 text-primary-container px-sm py-1 rounded-lg border border-primary-container/20 font-label-bold text-[10px] uppercase">Pagado</span>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase font-bold tracking-tighter">Número de Ticket</span>
+<span class="font-h1 text-h1 text-primary-fixed leading-none">#114</span>
+</div>
+<button class="bg-primary-container text-on-primary p-2 rounded-lg flex items-center justify-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="qr_code_2">qr_code_2</span>
+</button>
+</div>
+</div>
+</div>
+<div class="absolute top-1/2 -left-3 w-6 h-6 rounded-full bg-background border border-primary-container/15 -translate-y-1/2"></div>
+</div>
+</div>
+<!-- Info Card -->
+<div class="mt-xl bg-surface-container-high p-md rounded-xl border border-outline-variant flex gap-md items-start">
+<span class="material-symbols-outlined text-primary-container" data-icon="info">info</span>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                Recuerda que los tickets marcados como <span class="text-on-error-container font-bold">Pendientes</span> se cancelarán automáticamente después de 24 horas si no se confirma el pago.
+            </p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-[#162e21] rounded-t-2xl border-t border-emerald-500/10 shadow-[0_-4px_20px_rgba(0,0,0,0.5)] flex justify-around items-center h-20 px-4 pb-2">
+<div class="flex flex-col items-center justify-center text-slate-500 opacity-70 hover:opacity-100 active:scale-110 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="Confirmation_number">confirmation_number</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter font-inter mt-1">Sorteos</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#13ec6d] bg-emerald-500/10 rounded-xl px-3 py-1 active:scale-110 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="receipt_long" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter font-inter mt-1">Mis Tickets</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 opacity-70 hover:opacity-100 active:scale-110 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="military_tech">military_tech</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter font-inter mt-1">Ganadores</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 opacity-70 hover:opacity-100 active:scale-110 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter font-inter mt-1">Perfil</span>
+</div>
+</nav>
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#13ec6d",
+                    "on-primary": "#003914",
+                    "on-primary-fixed-variant": "#005321",
+                    "error": "#ffb4ab",
+                    "primary": "#9fffac",
+                    "on-secondary-container": "#a5baab",
+                    "surface": "#0d150d",
+                    "background": "#0d150d",
+                    "tertiary-container": "#cbcecd",
+                    "surface-tint": "#00e468",
+                    "surface-variant": "#2e372d",
+                    "on-surface-variant": "#bacbb8",
+                    "on-secondary": "#223429",
+                    "tertiary-fixed": "#e1e3e2",
+                    "surface-dim": "#0d150d",
+                    "tertiary": "#e8eae9",
+                    "on-tertiary-fixed-variant": "#444747",
+                    "surface-bright": "#323c32",
+                    "inverse-surface": "#dbe6d7",
+                    "surface-container-lowest": "#081008",
+                    "on-primary-container": "#00652a",
+                    "on-tertiary-fixed": "#191c1c",
+                    "on-tertiary-container": "#545857",
+                    "secondary-container": "#384b3f",
+                    "secondary": "#b6ccbc",
+                    "secondary-fixed-dim": "#b6ccbc",
+                    "on-secondary-fixed": "#0d1f15",
+                    "on-primary-fixed": "#002109",
+                    "surface-container": "#192219",
+                    "on-error": "#690005",
+                    "primary-fixed": "#67ff8c",
+                    "outline": "#859583",
+                    "primary-fixed-dim": "#00e468",
+                    "on-background": "#dbe6d7",
+                    "tertiary-fixed-dim": "#c4c7c6",
+                    "surface-container-high": "#232c23",
+                    "on-secondary-fixed-variant": "#384b3f",
+                    "inverse-primary": "#006e2e",
+                    "on-tertiary": "#2e3131",
+                    "error-container": "#93000a",
+                    "surface-container-highest": "#2e372d",
+                    "outline-variant": "#3b4b3c",
+                    "inverse-on-surface": "#293329",
+                    "surface-container-low": "#151e15",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed": "#d2e8d8",
+                    "on-surface": "#dbe6d7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "safe-margin": "20px",
+                    "xs": "4px",
+                    "unit": "4px",
+                    "lg": "24px",
+                    "grid-gutter": "8px",
+                    "xl": "32px",
+                    "md": "16px",
+                    "sm": "8px"
+            },
+            "fontFamily": {
+                    "h3": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h2": ["Inter"],
+                    "h1": ["Inter"],
+                    "number-grid": ["Inter"],
+                    "label-bold": ["Inter"]
+            },
+            "fontSize": {
+                    "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "h1": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "number-grid": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        background-color: #0d150d;
+      }
+      .ticket-perforation {
+        background-image: radial-gradient(circle, transparent 8px, #162e21 8px);
+        background-size: 24px 24px;
+        background-position: -12px center;
+        background-repeat: repeat-y;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-950/95 backdrop-blur-md border-b border-emerald-500/15 shadow-[0_4_20px_rgba(0,0,0,0.4)] flex justify-between items-center px-5 h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-emerald-400" data-icon="menu">menu</span>
+<h1 class="text-xl font-black italic text-emerald-400 uppercase tracking-widest font-inter">LOTO VZLA</h1>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-emerald-500/30 overflow-hidden active:scale-95 transition-transform">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A professional studio portrait of a young man with a friendly expression, set against a dark, moody background. The lighting is dramatic with soft green rim lights that align with a premium technology brand aesthetic. The overall style is clean, modern, and high-end, featuring deep blacks and vibrant emerald accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANkLhrmzWHL5a7WwZt26AZhQKqi9i8S9xRQG2-CBGoI7Hf9W3ntbn-KcZwTXtmAnjljhSWNPA6U7nzZAqQNwUytpnLY2uWCaI-l_UOMvGw4r5QmqNFL3jf9sw_a8sQKSDzZC99WuovlIdtUuYQyTcwNmRK5ORX_mwhtGPRASLhOW8dRRiJqDwNpyN5kdkXXmEocfsbwn_uZcReLKk27AQTW9iQUp6__Nk3JDPE2E0nxJjfP6E8jbKINSDDNYQL_8_ZjImobWuaLsSC"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-safe-margin max-w-2xl mx-auto">
+<!-- Header Section -->
+<div class="mb-lg">
+<h2 class="font-h1 text-h1 text-primary-fixed mb-xs">Mis Tickets</h2>
+<p class="font-body-md text-on-surface-variant">Gestiona tus participaciones activas y pasadas.</p>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-sm mb-lg overflow-x-auto pb-2 no-scrollbar">
+<span class="bg-primary-container text-on-primary font-label-bold text-label-bold px-md py-xs rounded-full whitespace-nowrap">Todos</span>
+<span class="bg-surface-container-high text-on-surface font-label-bold text-label-bold px-md py-xs rounded-full border border-outline-variant whitespace-nowrap">Pagados</span>
+<span class="bg-surface-container-high text-on-surface font-label-bold text-label-bold px-md py-xs rounded-full border border-outline-variant whitespace-nowrap">Pendientes</span>
+</div>
+<!-- Ticket List (Bento-ish Stack) -->
+<div class="space-y-md">
+<!-- Ticket Item 1 -->
+<div class="bg-[#162e21] rounded-xl border border-primary-container/15 overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.4)] relative">
+<div class="flex">
+<div class="w-24 h-full min-h-[120px] relative">
+<img class="w-full h-full object-cover grayscale-[0.2]" data-alt="Close up of high-quality grocery items including fresh vegetables and premium packaged goods in a rustic wooden basket. The lighting is warm but cinematic, with emerald green shadows that evoke a sense of luxury and abundance. The scene is shot with a shallow depth of field, highlighting the richness of the textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7ika3SJNoS6qILSOxUL8Q637rTQMrqQ5aVrcB5KM9ZlpKsiG8R65mEenZMyHDDs_-ZAECrv1w3gKuEI5_jXRCKlT5cOED6lm90_v4WlgWTtHn_iC7hsBT4KHNJd9aV5Dppeizg46DAOgvhgaGbYZ-Jih_9GdrhO2Z_T_6CcVy5rLEV1Cxc0frEB1LJ2C18v-cfz-HdC1D486brxj9HA9Ynze29XpR735DzjdD3XWFVhtt79y0VJVpwfFwFEQ5cNrOKQ-bDGI1bJLN"/>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#162e21]"></div>
+</div>
+<div class="flex-1 p-md flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-h3 text-h3 text-on-surface leading-tight">Súper Combo Alimenticio</h3>
+<p class="text-xs font-label-bold text-on-surface-variant mt-1 uppercase tracking-wider">Comprado: 24 May 2024</p>
+</div>
+<span class="bg-primary-container/10 text-primary-container px-sm py-1 rounded-lg border border-primary-container/20 font-label-bold text-[10px] uppercase">Pagado</span>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase font-bold tracking-tighter">Número de Ticket</span>
+<span class="font-h1 text-h1 text-primary-fixed leading-none">#03</span>
+</div>
+<button class="bg-primary-container text-on-primary p-2 rounded-lg flex items-center justify-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="qr_code_2">qr_code_2</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Ticket Notch Visual -->
+<div class="absolute top-1/2 -left-3 w-6 h-6 rounded-full bg-background border border-primary-container/15 -translate-y-1/2"></div>
+</div>
+<!-- Ticket Item 2 (Pending) -->
+<div class="bg-[#162e21] rounded-xl border border-primary-container/15 overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.4)] relative">
+<div class="flex">
+<div class="w-24 h-full min-h-[120px] relative">
+<img class="w-full h-full object-cover grayscale-[0.2]" data-alt="A sleek, modern high-end smartphone lying on a dark reflective surface. The screen glow creates a soft emerald aura around the device. The composition is minimalist and futuristic, using a professional tech-product photography style with deep shadows and vibrant neon green highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd6MnWZ33p4C-hH1t_ok190fL-qI81RJw6kdQsM_5nJ_nYDHh2c1xX6yNi4PRS9SobzNCSE9Vi3wD62dkg-5Tw7-X_OwzUvncPB7L-C16KWkeKo34CdkvnZqewPhw-Q2jQMIcQGSp3UItwykF8OX0PCw8PteB9HGcx1ehbytrODQPS5Jyol41M-432uZrX0RxuhbJ82a2loTx0P4CVoLMFLAdRmjmFCUoH5zNa26AwaoGZFBUHTSsdR-11vPZh7T8ZBgsTEyYMTomE"/>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#162e21]"></div>
+</div>
+<div class="flex-1 p-md flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-h3 text-h3 text-on-surface leading-tight">iPhone 15 Pro Max</h3>
+<p class="text-xs font-label-bold text-on-surface-variant mt-1 uppercase tracking-wider">Comprado: 22 May 2024</p>
+</div>
+<span class="bg-error-container text-on-error-container px-sm py-1 rounded-lg border border-error/20 font-label-bold text-[10px] uppercase">Pendiente</span>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase font-bold tracking-tighter">Número de Ticket</span>
+<span class="font-h1 text-h1 text-primary-fixed leading-none">#87</span>
+</div>
+<button class="border border-primary-container text-primary-container px-md py-1.5 rounded-lg text-label-bold font-label-bold active:scale-95 transition-transform">
+                                Pagar ahora
+                            </button>
+</div>
+</div>
+</div>
+<div class="absolute top-1/2 -left-3 w-6 h-6 rounded-full bg-background border border-primary-container/15 -translate-y-1/2"></div>
+</div>
+<!-- Ticket Item 3 -->
+<div class="bg-[#162e21] rounded-xl border border-primary-container/15 overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.4)] relative">
+<div class="flex">
+<div class="w-24 h-full min-h-[120px] relative">
+<img class="w-full h-full object-cover grayscale-[0.2]" data-alt="A powerful, black modern motorcycle parked in a dark garage with atmospheric green neon tube lighting in the background. The scene is high-contrast and dramatic, emphasizing the metallic textures and sleek curves of the bike. The mood is rebellious and high-stakes, fitting a premium raffle theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcwYPJo81aRaDM5_Vf04Bs7niaTYKcnMazd8GFnsNJIqbYIzbPI_iX1w628MEbBsOfoHE0RZ7g4yFky8VNtccYyGeu8xtbhwDkEuPeBoa4zlz-aIImieDgTHMO3Y2hCQMQf-LLu3SvgS-66xuvVLQt5lmoMguG1D8Wnxk--vMBf92EGQvZgNw_Uet5Vx3JQQc7auKqmwn-vTY_L2aPgoewVvGRMJ2wxtXTKnTwp4edm8KcCMl_xqMxYymTtb6WQwrxKZwVmnpaQ419"/>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#162e21]"></div>
+</div>
+<div class="flex-1 p-md flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-h3 text-h3 text-on-surface leading-tight">Moto Empire 2024</h3>
+<p class="text-xs font-label-bold text-on-surface-variant mt-1 uppercase tracking-wider">Comprado: 20 May 2024</p>
+</div>
+<span class="bg-primary-container/10 text-primary-container px-sm py-1 rounded-lg border border-primary-container/20 font-label-bold text-[10px] uppercase">Pagado</span>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div class="flex flex-col">
+<span class="text-[10px] text-on-surface-variant uppercase font-bold tracking-tighter">Número de Ticket</span>
+<span class="font-h1 text-h1 text-primary-fixed leading-none">#114</span>
+</div>
+<button class="bg-primary-container text-on-primary p-2 rounded-lg flex items-center justify-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="qr_code_2">qr_code_2</span>
+</button>
+</div>
+</div>
+</div>
+<div class="absolute top-1/2 -left-3 w-6 h-6 rounded-full bg-background border border-primary-container/15 -translate-y-1/2"></div>
+</div>
+</div>
+<!-- Info Card -->
+<div class="mt-xl bg-surface-container-high p-md rounded-xl border border-outline-variant flex gap-md items-start">
+<span class="material-symbols-outlined text-primary-container" data-icon="info">info</span>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                Recuerda que los tickets marcados como <span class="text-on-error-container font-bold">Pendientes</span> se cancelarán automáticamente después de 24 horas si no se confirma el pago.
+            </p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-[#162e21] rounded-t-2xl border-t border-emerald-500/10 shadow-[0_-4px_20px_rgba(0,0,0,0.5)] flex justify-around items-center h-20 px-4 pb-2">
+<div class="flex flex-col items-center justify-center text-slate-500 opacity-70 hover:opacity-100 active:scale-110 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="Confirmation_number">confirmation_number</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter font-inter mt-1">Sorteos</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#13ec6d] bg-emerald-500/10 rounded-xl px-3 py-1 active:scale-110 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="receipt_long" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter font-inter mt-1">Mis Tickets</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 opacity-70 hover:opacity-100 active:scale-110 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="military_tech">military_tech</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter font-inter mt-1">Ganadores</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 opacity-70 hover:opacity-100 active:scale-110 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter font-inter mt-1">Perfil</span>
+</div>
+</nav>
+</body></html>
