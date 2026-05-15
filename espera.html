@@ -103,17 +103,32 @@
     </style>
 </head>
 
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen pb-32">
-<!-- Top App Bar -->
-<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-4 py-3 flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-slate-900 dark:text-white cursor-pointer">verified</span>
+
+<body class="bg-surface font-body text-on-surface antialiased pb-24">
+
+<!-- TopAppBar -->
+<header class="bg-white/40 dark:bg-slate-900/70 backdrop-blur-md fixed top-0 w-full z-50 border-b border-slate-100 dark:border-slate-800 shadow-sm dark:shadow-none">
+<div class="flex items-center justify-between px-6 py-3 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+
+
+<p class="text-center text-[4px] text-on-surface-variant px-4 leading-relaxed">
+<span class="material-symbols-outlined text-green-600">verified</span>
+
+<h1 class="font-manrope font-bold tracking-tight text-xl font-black tracking-tighter text-green-700 dark:text-green-600">RIFA VENEZUELA</h1>
 </div>
-<h1 class="text-lg font-bold tracking-tight">RIFA VENEZUELA</h1>
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-slate-900 dark:text-white cursor-pointer">verified</span>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-slate-500 dark:text-slate-400 hover:opacity-80 transition-opacity font-medium" href="#">Sorteos</a>
+<a class="text-green-700 dark:text-green-400 font-bold hover:opacity-80 transition-opacity" href="#">Resultados</a>
+<a class="text-slate-500 dark:text-slate-400 hover:opacity-80 transition-opacity font-medium" href="#">Referidos</a>
+<a class="text-slate-500 dark:text-slate-400 hover:opacity-80 transition-opacity font-medium" href="#">Perfil</a>
 </div>
-</nav>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-green-600">verified</span>
+</div>
+</div>
+</header>
+
 
 <main class="pt-5 pb-20 px-safe-margin max-w-2xl mx-auto">
 <!-- Header Section -->
